@@ -44,13 +44,13 @@ def log_data(data):
 def check_notifications(cpu, mem, config):
 	print("\n\nAlerts:")
 	
-	if cpu > config[3]:
+	if float(cpu) > float(config[3]):
 		print("CPU usage exceeds threshold (" + cpu + "%)")
   
-	if mem > config[4]:
+	if float(mem) > float(config[4]):
 		print("Memory usage exceeds threshold (" + mem + "%)")
 
-	if cpu < config[3] and mem < config[4]:
+	if float(cpu) < float(config[3]) and float(mem) < float(config[4]):
 		print("No Alerts! System is good!")
 
 
